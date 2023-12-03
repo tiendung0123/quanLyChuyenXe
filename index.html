@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Container_ongTinh</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <h3 class="display-4 text-center">Quản Lý chuyến xe</h3>
+                <form id="formQLCX">
+                    <div class="row">
+                        <div class="col-6 form-group col-sm-12">
+                            <label for="">Số xe: </label>
+                            <select name="" id="txtsoXe" class="form-control">
+                                <option>Chọn xe</option>
+                                <option>Xe số 1</option>
+                                <option>Xe số 2</option>
+                                <option>Xe số 3</option>
+                            </select>
+                            <span id="spanSoXe" class="text-danger"></span>
+                        </div>
+                        <div class="col-6 form-group col-sm-12">
+                            <label for="">Số cont : </label>
+                            <input type="text" class="form-control" id="txtSoCont">
+                            <span id="spanSoCont" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group col-sm-12">
+                            <label for="">Ngày chạy : </label>
+                            <input type="date" class="form-control" id="txtNgayChay">
+                            <span id="spanNgayChay" class="text-danger"></span>
+                        </div>
+                        <div class="col-6 form-group col-sm-12">
+                            <label for="">Tiền cước : </label>
+                            <input type="number" class="form-control" id="txtTienCuoc">
+                            <span id="spanTienCuoc" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 form-group">
+                            <label for="">Tuyến đường vận tải : </label>
+                            <input type="text" class="form-control" id="txtTuyenDuong">
+                            <span id="spanTuyenDuong" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group text-center">
+                        <button type="button" onclick="handleThemChuyen()" class="btn btn-success">Thêm Chuyến</button>
+
+                        <button type="button" onclick="" class="btn btn-dark">Reset</button>
+                        <button type="button" onclick="handleCapNhatChuyenXe()" class="btn btn-info">Cập Nhật</button>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-9 form-group">                    
+                        <input placeholder="Nhập số xe" type="text" class="form-control" id="txtSearch">
+                    </div>
+                    <div class="col-3 form-group">
+                       <button id="btnSearch" class="btn btn-primary">Tìm kiếm</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 mx-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <!-- <th>STT</th> -->
+                            <th>Số xe</th>
+                            <th>Ngày chạy</th>
+                            <th>Số Cont</th>
+                            <th>Tuyến đường vận tải</th>
+                            <th>Tiền cước</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyChuyenXe">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+       
+    </div>
+    <script src="./js/ChuyenXe.js"></script>
+    <script src="./js/DSCX.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
